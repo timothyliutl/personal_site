@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Welcome from './pages/welcome';
+import Spotiwhy from './pages/spotiwhy';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Welcome></Welcome>
+    <Spotiwhy></Spotiwhy>
   </React.StrictMode>
 );
 
