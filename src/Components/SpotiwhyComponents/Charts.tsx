@@ -70,13 +70,13 @@ const Charts = (props: Data) =>{
     }
     if (props.type === 'doughnut'){
     return(
-        <div style={{width: '100%', justifyContent: 'center'}}>
-            <Doughnut data={data}></Doughnut>
+        <div>
+            <Doughnut height={'400px'} data={data} options={{responsive:true, maintainAspectRatio:false}}></Doughnut>
         </div>
         )
     }
     if(props.type === 'bar'){
-            return(<div style={{width: '100%', justifyContent: 'center'}}>
+            return(<div>
                 <Bar data={barData} options={options}></Bar>
             </div>)
         }

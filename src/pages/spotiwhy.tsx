@@ -23,6 +23,9 @@ const Spotiwhy = () => {
     const [allGenre, setAllGenre] = useState<dataObject>({2018:'hello'})
     const [yearOptions, setYearOptions] = useState<any>([2018])
 
+    const styles = {}
+    
+
 
 
     const handleChange = (
@@ -70,10 +73,14 @@ const Spotiwhy = () => {
 
 
         return (<div>
-
+    
+            <div style={{width: '100%', textAlign: 'center', marginTop:'50px'}}>
+                <Typography variant='h2'>What I've been Listening to</Typography>
+            </div>
+            
             <br></br>
             <hr style={{ width: '75%', marginRight: 'auto', marginLeft: 'auto' }}></hr>
-            <div style={{ width: '75%', marginRight: 'auto', marginLeft: 'auto', marginTop: '20px' }}>
+            <div style={{ width: '75%', marginRight: 'auto', marginLeft: 'auto', marginTop: '20px', textAlign:'center'}}>
                 <Typography variant='h5'>Select Year</Typography>
                 <br></br>
                 <ToggleButtonGroup defaultValue={2018} onChange={handleChange} value={selectedYear} exclusive color='secondary'>
@@ -92,17 +99,17 @@ const Spotiwhy = () => {
                 }
 
             </div>
-            <div style={{ marginLeft: 'auto', marginRight: 'auto', padding: '5%' }}>
-                <Grid container direction='row' justifyContent={'center'} alignItems="flex-start" spacing={4}>
-                    <Grid item xs={12} md={4} direction={'column'} justifyContent='center' style={{ marginTop: 20 }}>
+            <div style={{padding: '5%', textAlign:'center'}}>
+                <Grid container direction='row' justifyContent="center" alignItems="center" spacing={4}>
+                    <Grid item xs={12} md={4} direction={'column'} justifyContent='center' style={{ marginTop: 20}}>
                         <Typography variant='h4'>Plays by Top Genre</Typography>
                         <Charts type='doughnut' totalListening={allGenre[selectedYear]}></Charts>
                     </Grid>
-                    <Grid item container xs={12} md={4} direction={'column'} justifyContent='center' style={{ marginTop: 20 }}>
+                    <Grid item container xs={12} md={4} direction={'column'} justifyContent='center' style={{ marginTop: 20}}>
                         <Typography variant='h4'>Plays by Top Artist</Typography>
                         <Charts type='bar' totalListening={allArtist[selectedYear]}></Charts>
                     </Grid>
-                    <Grid item xs={12} md={4} direction={'column'} justifyContent='center' style={{ marginTop: 20 }}>
+                    <Grid item xs={12} md={4} direction={'column'} justifyContent='center' style={{ marginTop: 20}}>
                         <Typography variant='h4'>Top Songs</Typography>
                         <Card style={{ maxHeight: '500px', overflow: 'auto' }} elevation={0}>
                             <SongList totalListening={topSongsData[selectedYear]}></SongList>
