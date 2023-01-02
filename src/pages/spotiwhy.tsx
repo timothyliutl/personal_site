@@ -43,9 +43,9 @@ const Spotiwhy = () => {
     };
 
     async function fetchData() {
-        const artist_data = await axios('http://127.0.0.1:8000/api/artist_all')
-        const genre_data = await axios('http://127.0.0.1:8000/api/genre_all')
-        const top_plays = await axios('http://127.0.0.1:8000/api/top_plays')
+        const artist_data = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/artist_all')
+        const genre_data = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/genre_all')
+        const top_plays = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/top_plays')
         setAllArtist(JSON.parse(artist_data.data))
         setAllGenre(JSON.parse(genre_data.data))
         setTopSongsData(JSON.parse(top_plays.data))
