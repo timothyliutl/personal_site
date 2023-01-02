@@ -32,6 +32,7 @@ const Charts = (props: Data) =>{
 
     const options = {
         responsive: true,
+        maintainAspectRatio:false,
         plugins: {
           title: {
             display: false,
@@ -70,14 +71,14 @@ const Charts = (props: Data) =>{
     }
     if (props.type === 'doughnut'){
     return(
-        <div>
+        <div style={{width: '99%',position: "relative", margin: "auto"}}>
             <Doughnut height={'400px'} data={data} options={{responsive:true, maintainAspectRatio:false}}></Doughnut>
         </div>
         )
     }
     if(props.type === 'bar'){
-            return(<div>
-                <Bar data={barData} options={options}></Bar>
+            return(<div style={{position: "relative", width: '99%'}}>
+                <Bar height={'250px'} data={barData} options={options}></Bar>
             </div>)
         }
     return(<div></div>)
