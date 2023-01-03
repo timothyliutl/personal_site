@@ -5,12 +5,28 @@ import reportWebVitals from './reportWebVitals';
 import Welcome from './pages/welcome';
 import Spotiwhy from './pages/spotiwhy';
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/spotiwhy",
+    element: <Spotiwhy></Spotiwhy>,
+  },
+  {
+    path: "/",
+    element: <Welcome></Welcome>
+  }
+]);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Spotiwhy></Spotiwhy>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
