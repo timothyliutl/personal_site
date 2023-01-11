@@ -24,7 +24,7 @@ const Welcome = () => {
 
                     </div>
                     <Grid container direction={'row'} justifyContent='space-evenly' style={{ marginTop: '30px' }}>
-                        <a href={''} style={{ textDecoration: 'none' }}>
+                        <a href={'https://drive.google.com/file/d/1Twc6VvtkhR4H7NAEpk2uletMF3dAD5mB/view?usp=sharing'} target={'_blank'} style={{ textDecoration: 'none' }}>
                             <Card sx={{ minWidth: '220px', paddingTop: '10px' }}>
                                 <CardContent>
                                     <Grid container justifyContent={'space-between'}>

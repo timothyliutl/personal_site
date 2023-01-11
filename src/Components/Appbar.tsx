@@ -16,9 +16,11 @@ const MyAppBar = () =>{
                     </Box>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container justifyContent={'flex-end'}>
+                            <Link to={'/'} style={{textDecoration:'none'}}>
                             <Button sx={{ my: 2, color: 'white' }}>
                                 Home
                             </Button>
+                            </Link>
                             <Button sx={{ my: 2, color: 'white' }}>
                                 Projects
                             </Button>
