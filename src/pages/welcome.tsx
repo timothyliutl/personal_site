@@ -75,7 +75,6 @@ const Welcome = () => {
                     </Grid>
                 </Container>
             </div>
-
         </div>
     )
 }
