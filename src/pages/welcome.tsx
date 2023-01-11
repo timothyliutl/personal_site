@@ -5,6 +5,8 @@ import React from 'react'
 import ArticleIcon from '@mui/icons-material/Article';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link } from 'react-router-dom';
+import MyAppBar from '../Components/Appbar';
 
 
 
@@ -12,30 +14,7 @@ const Welcome = () => {
 
     return (
         <div style={{ justifyContent: 'center', width: '100%' }}>
-            <AppBar position='static' component={'nav'}>
-                <Toolbar>
-                    <Typography variant='h4' sx={{ my: 2 }}>
-                        Timothy Liu
-                    </Typography>
-                    <Box sx={{ flexGrow: 1 }}>
-
-                    </Box>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Grid container justifyContent={'flex-end'}>
-                            <Button sx={{ my: 2, color: 'white' }}>
-                                Home
-                            </Button>
-                            <Button sx={{ my: 2, color: 'white' }}>
-                                Projects
-                            </Button>
-                            <Button sx={{ my: 2, color: 'white' }}>
-                                Contact
-                            </Button>
-                        </Grid>
-                    </Box>
-
-                </Toolbar>
-            </AppBar>
+            <MyAppBar></MyAppBar>
             <div style={{ marginTop: '70px' }}>
                 <Container style={{ width: '70%' }}>
                     <Typography variant='h2' textAlign={'center'}> Hello I'm Timothy Liu </Typography>
@@ -45,48 +24,54 @@ const Welcome = () => {
 
                     </div>
                     <Grid container direction={'row'} justifyContent='space-evenly' style={{ marginTop: '30px' }}>
-                        <Card sx={{ minWidth: '220px', paddingTop: '10px' }}>
-                            <CardContent>
-                                <Grid container justifyContent={'space-between'}>
-                                    <Grid item>
-                                        <ArticleIcon color='primary' fontSize='large'></ArticleIcon>
+                        <a href={''} style={{ textDecoration: 'none' }}>
+                            <Card sx={{ minWidth: '220px', paddingTop: '10px' }}>
+                                <CardContent>
+                                    <Grid container justifyContent={'space-between'}>
+                                        <Grid item>
+                                            <ArticleIcon color='primary' fontSize='large'></ArticleIcon>
+                                        </Grid>
+                                        <Grid item>
+                                            <Typography variant='h6' textAlign={'center'}>
+                                                Resume
+                                            </Typography>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item>
-                                        <Typography variant='h6' textAlign={'center'}>
-                                            Resume
-                                        </Typography>
+                                </CardContent>
+                            </Card>
+                        </a>
+                        <a href='https://github.com/timothyliutl' target={'_blank'} style={{ textDecoration: 'none' }}>
+                            <Card sx={{ minWidth: '220px', paddingTop: '10px' }}>
+                                <CardContent>
+                                    <Grid container justifyContent={'space-between'}>
+                                        <Grid item>
+                                            <GitHubIcon color='primary' fontSize='large'></GitHubIcon>
+                                        </Grid>
+                                        <Grid item>
+                                            <Typography variant='h6'>
+                                                GitHub
+                                            </Typography>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
-                            </CardContent>
-                        </Card>
-                        <Card sx={{minWidth:'220px', paddingTop: '10px' }}>
-                        <CardContent>
-                                <Grid container justifyContent={'space-between'}>
-                                    <Grid item>
-                                        <GitHubIcon color='primary' fontSize='large'></GitHubIcon>
+                                </CardContent>
+                            </Card>
+                        </a>
+                        <a href='https://www.linkedin.com/in/timothy-liu-4a738619b/' target={'_blank'} style={{textDecoration:'none'}}>
+                            <Card sx={{ minWidth: '220px', paddingTop: '10px' }}>
+                                <CardContent>
+                                    <Grid container justifyContent={'space-between'}>
+                                        <Grid item>
+                                            <LinkedInIcon color='primary' fontSize='large'></LinkedInIcon>
+                                        </Grid>
+                                        <Grid item>
+                                            <Typography variant='h6'>
+                                                LinkedIn
+                                            </Typography>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item>
-                                        <Typography variant='h6'>
-                                            GitHub
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
-                            </CardContent>
-                        </Card>
-                        <Card sx={{ minWidth: '220px', paddingTop: '10px' }}>
-                        <CardContent>
-                                <Grid container justifyContent={'space-between'}>
-                                    <Grid item>
-                                        <LinkedInIcon color='primary' fontSize='large'></LinkedInIcon>
-                                    </Grid>
-                                    <Grid item>
-                                        <Typography variant='h6'>
-                                            LinkedIn
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
-                            </CardContent>
-                        </Card>
+                                </CardContent>
+                            </Card>
+                        </a>
                     </Grid>
                 </Container>
             </div>
