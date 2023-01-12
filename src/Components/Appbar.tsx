@@ -21,9 +21,11 @@ const MyAppBar = () =>{
                                 Home
                             </Button>
                             </Link>
+                            <Link to={'/projects'} style={{textDecoration:'none'}}>
                             <Button sx={{ my: 2, color: 'white' }}>
                                 Projects
                             </Button>
+                            </Link>
                             <Link to={'/spotiwhy'} style={{textDecoration:'none'}}>
                             <Button sx={{ my: 2, color: 'white' }}>
                                 Spotify

@@ -9,6 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ProjectPage from './pages/projects';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Welcome></Welcome>
+  },
+  {
+    path: '/projects',
+    element: <ProjectPage></ProjectPage>
   }
 ]);
 
