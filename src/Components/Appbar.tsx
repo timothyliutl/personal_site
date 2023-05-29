@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const MyAppBar = () =>{
 
     return(
-        <AppBar position='static' component={'nav'}>
+        <AppBar position='static' component={'nav'} style={{zIndex:100}}>
                 <Toolbar>
                     <Typography variant='h4' sx={{ my: 2 }}>
                         Timothy Liu
