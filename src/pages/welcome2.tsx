@@ -1,6 +1,7 @@
 import React from "react";
 import Intro from "../PageElements/Intro";
 import MyAppBar from "../Components/Appbar";
+import Projects from "../PageElements/Projects";
 
 const Welcome2 = () =>{
 
@@ -8,6 +9,7 @@ const Welcome2 = () =>{
         <div style={{minHeight:'100%'}}>
             <MyAppBar></MyAppBar>
             <Intro></Intro>
+            <Projects></Projects>
         </div>
     )
 }

@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 const MyAppBar = () =>{
 
     return(
-        <AppBar position='static' component={'nav'} style={{zIndex:100}}>
+        <AppBar position='fixed' component={'nav'} style={{zIndex:100}}>
                 <Toolbar>
                     <Typography variant='h4' sx={{ my: 2 }}>
-                        Timothy Liu
+                        
                     </Typography>
                     <Box sx={{ flexGrow: 1 }}>
 
@@ -18,17 +18,22 @@ const MyAppBar = () =>{
                         <Grid container justifyContent={'flex-end'}>
                             <Link to={'/'} style={{textDecoration:'none'}}>
                             <Button sx={{ my: 2, color: 'white' }}>
-                                Home
-                            </Button>
-                            </Link>
-                            <Link to={'/projects'} style={{textDecoration:'none'}}>
-                            <Button sx={{ my: 2, color: 'white' }}>
                                 Projects
                             </Button>
                             </Link>
-                            <Link to={'/spotiwhy'} style={{textDecoration:'none'}}>
+                            <Link to={'/'} style={{textDecoration:'none'}}>
                             <Button sx={{ my: 2, color: 'white' }}>
-                                Spotify
+                                About
+                            </Button>
+                            </Link>
+                            <Link to={'/'} style={{textDecoration:'none'}}>
+                            <Button sx={{ my: 2, color: 'white' }}>
+                                Skills
+                            </Button>
+                            </Link>
+                            <Link to={'/'} style={{textDecoration:'none'}}>
+                            <Button sx={{ my: 2, color: 'white' }}>
+                                Contact
                             </Button>
                             </Link>
                         </Grid>
