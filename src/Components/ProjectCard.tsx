@@ -7,7 +7,13 @@ interface propsData {
     description: string,
     image?: string,
     github?: string,
-    liveDemo?: string
+    liveDemo?: string,
+    customButton?: Array<customButton>
+}
+
+interface customButton{
+    text: string,
+    url: string
 }
 
 interface actionProps {
@@ -29,7 +35,7 @@ const ProjectCard = (props: propsData) => {
 
     return (
 
-        <Card variant="outlined" sx={{ width: '345px', height:'100%'}}>
+        <Card variant="outlined" sx={{ width: '345px', height:'100%', display:'flex', justifyContent:'space-between', flexDirection:'column'}}>
             <CardMedia image={props.image} sx={{ height: '140px' }}></CardMedia>
             <CardContent>
                 <Typography variant="h5">{props.title}</Typography>
@@ -38,6 +44,11 @@ const ProjectCard = (props: propsData) => {
             <CardActions>
                 <ActionButton link={props.liveDemo} text="Live Demo"></ActionButton>
                 <ActionButton link={props.github} text="GitHub"></ActionButton>
+                {props.customButton?.map((data)=>{
+                    return(
+                        <ActionButton link={data.url} text={data.text}></ActionButton>
+                    )
+                })}
             </CardActions>
         </Card>
 

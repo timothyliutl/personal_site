@@ -2,8 +2,11 @@ import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import MyAppBar from "../Components/Appbar";
 import { loadFull } from "tsparticles";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Button, Grid, Icon, SvgIcon, Typography } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 
 
 const Intro = () => {
@@ -131,16 +134,16 @@ const Intro = () => {
                         <hr style={{ marginTop: '20px', marginBottom: '20px' }}></hr>
                         <Grid container spacing={3}>
                             <Grid item>
-                                <Button style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Projects</Button>
+                                <Button startIcon={<InsertDriveFileIcon></InsertDriveFileIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Resume</Button>
                             </Grid>
                             <Grid item>
-                                <Button style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">About</Button>
+                                <Button startIcon={<GitHubIcon></GitHubIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">GitHub</Button>
                             </Grid>
                             <Grid item>
-                                <Button style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Skills</Button>
+                                <Button startIcon={<LinkedInIcon></LinkedInIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">LinkedIn</Button>
                             </Grid>
                             <Grid item>
-                                <Button style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Contact Me</Button>
+                                <Button startIcon={<Icon sx={{width:'23px', height:'23px', color:'blue'}}><img style={{width:'23px', height:'23px'}} src="./riot-games.svg"></img></Icon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Riot Games</Button>
                             </Grid>
                         </Grid>
                     </div>

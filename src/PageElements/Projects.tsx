@@ -3,27 +3,36 @@ import React from "react";
 import ProjectCard from "../Components/ProjectCard";
 
 const Projects = () => {
+    interface customButton{
+        text: string,
+        url: string
+    }
 
     interface projectData {
         name: string,
         description: string,
         image?: string,
         github?: string,
-        liveDemo?: string
+        liveDemo?: string,
+        customButton?: Array<customButton>
     }
 
     const projects: Array<projectData> = [{
         name: 'Manim Animations',
-        description: 'Custom animations made for my Calculus TA sessions',
+        description: 'Custom animations made for my Calculus TA sessions.',
         image: 'https://i.ytimg.com/vi/I0MwXnKSIAM/maxresdefault.jpg',
         github:'https://github.com/timothyliutl/math-animations',
         liveDemo:''
     },{
         name: 'Capstone Project',
-        description: 'Image Compression System used to send images through a noisy channel',
-        image: 'https://github.com/timothyliutl/MTHE-493/blob/main/quantizer_code/images/image_city_24b_e005.png?raw=true',
+        description: 'Final 4th year project supervised by Professor Tamas Linder. Image Compression System used to send images through a noisy channel.',
+        image: './compressed_image.png',
         github:'https://github.com/timothyliutl/MTHE-493',
-        liveDemo:''
+        liveDemo:'',
+        customButton:[{
+            text:'Thesis',
+            url:'tbd'
+        }]
     },
     {
         name: 'Personal Website',
@@ -47,10 +56,13 @@ const Projects = () => {
         liveDemo:''
     },
     ]
+    
 
     return (
-        <div style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom:'100px' }}>
-            <div style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto', paddingTop: '200px' }}>
+        <div style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom:'100px', marginBottom:'0px' }}>
+            <div style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto', paddingTop: '100px' }}>
+                <hr style={{width:'40%', marginBottom:'100px'}}></hr>
+                
                 <Typography style={{ marginTop: '10px' }} textAlign={'center'} fontFamily={'Open Sans'} color={'white'} variant="subtitle1">My Recent Work</Typography>
                 <Typography textAlign={'center'} variant="h3" fontFamily={'Open Sans'} color={'#caf0f8'}>Projects</Typography>
                 <Grid style={{marginTop:'50px'}} container spacing={3} justifyContent={'center'}>
@@ -58,7 +70,7 @@ const Projects = () => {
                         projects.map((data) => {
                             return (
                                 <Grid sm={6} md={4} item justifyContent={'center'}>
-                                    <ProjectCard title={data.name} description={data.description} image={data.image} liveDemo={data.liveDemo} github={data.github}></ProjectCard>
+                                    <ProjectCard title={data.name} description={data.description} image={data.image} liveDemo={data.liveDemo} github={data.github} customButton={data.customButton}></ProjectCard>
                                 </Grid>
                             )
                         })
