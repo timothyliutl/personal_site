@@ -41,12 +41,12 @@ const MyAppBar = (props:onClickProps) =>{
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container justifyContent={'flex-end'}>
                             <Link to={'/'} style={{textDecoration:'none'}}>
-                            <Button onClick={props.skillOnClick} sx={{ my: 2, color: 'white' }}>
+                            <Button onClick={props.projectOnClick} sx={{ my: 2, color: 'white' }}>
                                 Projects
                             </Button>
                             </Link>
                             <Link to={'/'} style={{textDecoration:'none'}}>
-                            <Button onClick={props.projectOnClick} sx={{ my: 2, color: 'white' }}>
+                            <Button onClick={props.skillOnClick} sx={{ my: 2, color: 'white' }}>
                                 Experience
                             </Button>
                             </Link>
