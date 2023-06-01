@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import MyAppBar from "../Components/Appbar";
 import { loadFull } from "tsparticles";
-import { Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material';
 
 
@@ -82,7 +82,7 @@ const Intro = () => {
                             width: 1,
                         },
                         collisions: {
-                            enable: true,
+                            enable: false,
                         },
                         move: {
                             direction: "none",
@@ -124,9 +124,11 @@ const Intro = () => {
                         }}
                     >
                         <Typography color={'#caf0f8'} variant="h3" textAlign={'left'} fontFamily={'Open Sans'}>Hi, I'm Timothy Liu</Typography>
-                        <div>
+
+                        <Box sx={{ display: { xs: 'none', md: 'block' }}}>
                             <Typography color={'#caf0f8'} variant="h4" fontFamily={'Open Sans'}>A Recent Mathematics and Engineering Graduate</Typography>
-                        </div>                        <hr style={{ marginTop: '20px', marginBottom: '20px' }}></hr>
+                        </Box>
+                        <hr style={{ marginTop: '20px', marginBottom: '20px' }}></hr>
                         <Grid container spacing={3}>
                             <Grid item>
                                 <Button style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Projects</Button>

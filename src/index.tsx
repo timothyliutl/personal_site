@@ -18,15 +18,11 @@ const router = createBrowserRouter([
     element: <Spotiwhy></Spotiwhy>,
   },
   {
-    path: "/",
-    element: <Welcome></Welcome>
-  },
-  {
     path: '/projects',
     element: <ProjectPage></ProjectPage>
   },
   {
-    path: '/welcome2',
+    path: '/',
     element: <Welcome2></Welcome2>
   }
 ]);

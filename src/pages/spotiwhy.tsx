@@ -94,7 +94,7 @@ const Spotiwhy = () => {
     return (<div>
         <MyAppBar></MyAppBar>
 
-        <div style={{ width: '100%', textAlign: 'center', marginTop: '50px' }}>
+        <div style={{ width: '100%', textAlign: 'center', marginTop: '100px' }}>
             <Typography variant='h2'>What I've been Listening to</Typography>
         </div>
 
