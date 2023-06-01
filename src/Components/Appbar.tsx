@@ -42,17 +42,7 @@ const MyAppBar = () =>{
                             </Link>
                             <Link to={'/'} style={{textDecoration:'none'}}>
                             <Button sx={{ my: 2, color: 'white' }}>
-                                About
-                            </Button>
-                            </Link>
-                            <Link to={'/'} style={{textDecoration:'none'}}>
-                            <Button sx={{ my: 2, color: 'white' }}>
                                 Experience
-                            </Button>
-                            </Link>
-                            <Link to={'/'} style={{textDecoration:'none'}}>
-                            <Button sx={{ my: 2, color: 'white' }}>
-                                Contact
                             </Button>
                             </Link>
                         </Grid>

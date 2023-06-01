@@ -13,7 +13,6 @@ const Welcome2 = () =>{
             <Intro></Intro>
             <Projects></Projects>
             <Skills></Skills>
-            <About></About>
         </div>
     )
 }

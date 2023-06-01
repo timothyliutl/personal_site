@@ -134,16 +134,16 @@ const Intro = () => {
                         <hr style={{ marginTop: '20px', marginBottom: '20px' }}></hr>
                         <Grid container spacing={3}>
                             <Grid item>
-                                <Button startIcon={<InsertDriveFileIcon></InsertDriveFileIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Resume</Button>
+                                <Button target="_blank" href="https://drive.google.com/file/d/14K6Xu0yd7YsmYZ3R6g9rMOszR2HcaGEM/view?usp=sharing" startIcon={<InsertDriveFileIcon></InsertDriveFileIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Resume</Button>
                             </Grid>
                             <Grid item>
-                                <Button startIcon={<GitHubIcon></GitHubIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">GitHub</Button>
+                                <Button target="_blank" href="https://github.com/timothyliutl" startIcon={<GitHubIcon></GitHubIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">GitHub</Button>
                             </Grid>
                             <Grid item>
-                                <Button startIcon={<LinkedInIcon></LinkedInIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">LinkedIn</Button>
+                                <Button target="_blank" href="https://www.linkedin.com/in/timothy-liu-4a738619b/" startIcon={<LinkedInIcon></LinkedInIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">LinkedIn</Button>
                             </Grid>
                             <Grid item>
-                                <Button startIcon={<Icon sx={{width:'23px', height:'23px', color:'blue'}}><img style={{width:'23px', height:'23px'}} src="./riot-games.svg"></img></Icon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Riot Games</Button>
+                                <Button target="_blank" href="https://blitz.gg/lol/profile/na1/GentianPurple" startIcon={<Icon sx={{width:'23px', height:'23px', color:'blue'}}><img style={{width:'23px', height:'23px'}} src="./riot-games.svg"></img></Icon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Riot Games</Button>
                             </Grid>
                         </Grid>
                     </div>
