@@ -35,7 +35,7 @@ const Projects = (props:props) => {
         liveDemo:'',
         customButton:[{
             text:'Thesis',
-            url:'tbd'
+            url:'https://github.com/timothyliutl/MTHE-493/blob/main/Capstone.pdf'
         }]
     },
     {
