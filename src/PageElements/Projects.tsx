@@ -2,7 +2,11 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 import ProjectCard from "../Components/ProjectCard";
 
-const Projects = () => {
+interface props{
+    refs?: any
+}
+
+const Projects = (props:props) => {
     interface customButton{
         text: string,
         url: string
@@ -59,7 +63,7 @@ const Projects = () => {
     
 
     return (
-        <div style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom:'100px', marginBottom:'0px' }}>
+        <div ref={props.refs} style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom:'100px', marginBottom:'0px' }}>
             <div style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto', paddingTop: '100px' }}>
                 <hr style={{width:'40%', marginBottom:'100px'}}></hr>
                 

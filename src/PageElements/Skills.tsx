@@ -3,7 +3,11 @@ import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 //actually lets make this experience
-const Skills = () => {
+interface props{
+    refs?: any
+}
+
+const Skills = (props:props) => {
 
     interface timelineElement {
         title: string,
@@ -46,7 +50,7 @@ const Skills = () => {
 
     ]
     return (
-        <div style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom: '100px', marginTop: '0px', paddingTop: '100px' }}>
+        <div ref={props.refs} style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom: '100px', marginTop: '0px', paddingTop: '100px' }}>
             <hr style={{width:'30%', marginBottom:'100px'}}></hr>
             <Typography style={{ marginTop: '10px' }} textAlign={'center'} fontFamily={'Open Sans'} color={'white'} variant="subtitle1">My Past Positions</Typography>
             <Typography textAlign={'center'} variant="h3" fontFamily={'Open Sans'} color={'#caf0f8'}>Experiences</Typography>
