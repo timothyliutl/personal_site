@@ -4,6 +4,7 @@ import MyAppBar from "../Components/Appbar";
 import Projects from "../PageElements/Projects";
 import About from "../PageElements/About";
 import Skills from "../PageElements/Skills";
+import Education from "../PageElements/Education";
 import {useRef} from 'react';
 
 
@@ -30,6 +31,7 @@ const Welcome2 = () =>{
             <Intro></Intro>
             <Projects refs={myRefProject}></Projects>
             <Skills refs={myRefSkills}></Skills>
+            <Education></Education>
         </div>
     )
 }
