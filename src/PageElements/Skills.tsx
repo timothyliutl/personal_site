@@ -2,6 +2,7 @@ import { Avatar, Typography } from "@mui/material";
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import engsocImg from "../images/engsoc.png"
 //actually lets make this experience
 interface props{
     refs?: any
@@ -44,7 +45,7 @@ const Skills = (props:props) => {
             title: 'Project Lead, Engineering Society at Queen\'s',
             subtitle: 'Kingston, ON',
             date: 'March 2020 - December 2020',
-            icon: <Avatar src="https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/371536037_841632667735294_765564908183873641_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=1FqS2LZF6zkAX9s3joD&_nc_ht=scontent-bos5-1.xx&oh=00_AfATx3dOaXKtTUaDQFuyjN2eeG4edYe59hOjxocpliGafg&oe=658D220E" sx={{width:'100%', height:'100%'}}></Avatar>,
+            icon: <Avatar src={engsocImg} sx={{width:'100%', height:'100%'}}></Avatar>,
             description: `Lead a team of 3 students to create event hosting Flutter Application.`
         },
 
