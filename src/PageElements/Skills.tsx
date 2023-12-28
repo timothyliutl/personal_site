@@ -2,8 +2,13 @@ import { Avatar, Typography } from "@mui/material";
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import engsocImg from "../images/engsoc.png"
 //actually lets make this experience
-const Skills = () => {
+interface props{
+    refs?: any
+}
+
+const Skills = (props:props) => {
 
     interface timelineElement {
         title: string,
@@ -40,13 +45,13 @@ const Skills = () => {
             title: 'Project Lead, Engineering Society at Queen\'s',
             subtitle: 'Kingston, ON',
             date: 'March 2020 - December 2020',
-            icon: <Avatar src="https://pbs.twimg.com/profile_images/750177353872076800/VntP7PBL_400x400.jpg" sx={{width:'100%', height:'100%'}}></Avatar>,
+            icon: <Avatar src={engsocImg} sx={{width:'100%', height:'100%'}}></Avatar>,
             description: `Lead a team of 3 students to create event hosting Flutter Application.`
         },
 
     ]
     return (
-        <div style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom: '100px', marginTop: '0px', paddingTop: '100px' }}>
+        <div ref={props.refs} style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom: '100px', marginTop: '0px', paddingTop: '100px' }}>
             <hr style={{width:'30%', marginBottom:'100px'}}></hr>
             <Typography style={{ marginTop: '10px' }} textAlign={'center'} fontFamily={'Open Sans'} color={'white'} variant="subtitle1">My Past Positions</Typography>
             <Typography textAlign={'center'} variant="h3" fontFamily={'Open Sans'} color={'#caf0f8'}>Experiences</Typography>

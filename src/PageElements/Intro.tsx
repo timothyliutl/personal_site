@@ -126,13 +126,18 @@ const Intro = () => {
                             transform: 'translate(0px,-50px)'
                         }}
                     >
-                        <Typography color={'#caf0f8'} variant="h3" textAlign={'left'} fontFamily={'Open Sans'}>Hi, I'm Timothy Liu</Typography>
+                        <Box display={'inline-block'}>
+                            <Typography color={'#caf0f8'} variant="h3" textAlign={'center'} fontFamily={'Open Sans'}>Hi, I'm Timothy Liu</Typography>
+                        </Box>
 
                         <Box sx={{ display: { xs: 'none', md: 'block' }}}>
                             <Typography color={'#caf0f8'} variant="h4" fontFamily={'Open Sans'}>A Recent Mathematics and Engineering Graduate</Typography>
                         </Box>
                         <hr style={{ marginTop: '20px', marginBottom: '20px' }}></hr>
-                        <Grid container spacing={3}>
+                        {
+                        //TODO: figure out how to center this on small
+                        }
+                        <Grid sx={{ display: { xs: 'none', md: 'flex' }}} justifyContent={'left'} container xs={6} sm={12} spacing={3}>
                             <Grid item>
                                 <Button target="_blank" href="https://drive.google.com/file/d/14K6Xu0yd7YsmYZ3R6g9rMOszR2HcaGEM/view?usp=sharing" startIcon={<InsertDriveFileIcon></InsertDriveFileIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Resume</Button>
                             </Grid>
@@ -146,6 +151,21 @@ const Intro = () => {
                                 <Button target="_blank" href="https://blitz.gg/lol/profile/na1/GentianPurple" startIcon={<Icon sx={{width:'23px', height:'23px', color:'blue'}}><img style={{width:'23px', height:'23px'}} src="./riot-games.svg"></img></Icon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Riot Games</Button>
                             </Grid>
                         </Grid>
+                        <Grid style={{marginRight: 'auto', marginLeft:'auto'}} sx={{ display: { xs: 'flex', md: 'none' }}} justifyContent={'center'} container xs={6} sm={12} spacing={3}>
+                            <Grid item>
+                                <Button target="_blank" href="https://drive.google.com/file/d/14K6Xu0yd7YsmYZ3R6g9rMOszR2HcaGEM/view?usp=sharing" startIcon={<InsertDriveFileIcon></InsertDriveFileIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Resume</Button>
+                            </Grid>
+                            <Grid item>
+                                <Button target="_blank" href="https://github.com/timothyliutl" startIcon={<GitHubIcon></GitHubIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">GitHub</Button>
+                            </Grid>
+                            <Grid item>
+                                <Button target="_blank" href="https://www.linkedin.com/in/timothy-liu-4a738619b/" startIcon={<LinkedInIcon></LinkedInIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">LinkedIn</Button>
+                            </Grid>
+                            <Grid item>
+                                <Button target="_blank" href="https://blitz.gg/lol/profile/na1/GentianPurple" startIcon={<Icon sx={{width:'23px', height:'23px', color:'blue'}}><img style={{width:'23px', height:'23px'}} src="./riot-games.svg"></img></Icon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Riot Games</Button>
+                            </Grid>
+                        </Grid>
+                        
                     </div>
                 </ThemeProvider>
             </div>
