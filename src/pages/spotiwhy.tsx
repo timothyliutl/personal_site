@@ -9,8 +9,12 @@ import { CircularProgress, ToggleButton, ToggleButtonGroup } from '@mui/material
 import axios from 'axios';
 import MyAppBar from '../Components/Appbar';
 
+import genreJSON from '../data/genre_all.json'
+import playsJSON from '../data/top_plays.json'
+import artistsJSON from '../data/artist_all.json'
+
 type dataObject = {
-    [key: number]: any;
+    [key: string]: any;
 }
 
 const Spotiwhy = () => {
@@ -44,14 +48,17 @@ const Spotiwhy = () => {
     };
 
     async function fetchData() {
-        const artist_data = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/artist_all')
-        const genre_data = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/genre_all')
-        const top_plays = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/top_plays')
-        setAllArtist(JSON.parse(artist_data.data))
-        setAllGenre(JSON.parse(genre_data.data))
-        setTopSongsData(JSON.parse(top_plays.data))
+        //const artist_data = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/artist_all')
+        //const genre_data = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/genre_all')
+        //const top_plays = await axios('https://wmec5lhuje.execute-api.us-east-1.amazonaws.com/dev/api/top_plays')
+        setAllArtist(JSON.parse(artistsJSON))
+        setAllGenre(JSON.parse(genreJSON))
+        setTopSongsData(JSON.parse(playsJSON))
 
-        setYearOptions(Object.keys(JSON.parse(genre_data.data)))
+        console.log(allArtist)
+        console.log(JSON.parse(artistsJSON))
+
+        setYearOptions(Object.keys(JSON.parse(genreJSON)))
     }
 
     useEffect(() => {
