@@ -1,5 +1,9 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Card, Container, Grid, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Card, CardContent, Chip, Container, Grid, Paper, Typography } from '@mui/material';
 import React from 'react';
+import Fade from '@mui/material';
+import SchoolIcon from '@mui/icons-material/School';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import PlaceIcon from '@mui/icons-material/Place';
 
 
 interface props {
@@ -8,30 +12,54 @@ interface props {
 const Education = (props: props) => {
 
     return (
-        <div style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom: '100px', marginTop: '0px', paddingTop: '100px', display:'none' }}>
+        <div style={{ minHeight: '100vh', backgroundColor: '#023E8A', paddingBottom: '100px', marginTop: '0px', paddingTop: '100px', display: '' }}>
             <hr style={{ width: '30%', marginBottom: '100px' }}></hr>
             <Typography style={{ marginTop: '10px' }} textAlign={'center'} fontFamily={'Open Sans'} color={'white'} variant="subtitle1">My Academic Journey</Typography>
             <Typography textAlign={'center'} variant="h3" fontFamily={'Open Sans'} color={'#caf0f8'}>Education</Typography>
             <div style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', marginTop: '70px' }}>
-                <Accordion disableGutters={true} TransitionProps={{easing:{enter:"cubic-bezier(.17,.67,.83,.67)"}}} elevation={0} sx={{ backgroundColor: 'transparent' }}>
-                    <AccordionSummary>
-                        <Card style={{ width: '100%', padding: '15px' }}>
-                            <Grid container>
-                                <Grid item xs={8}>
-                                    <Typography>Bachelor's of Applied Science</Typography>
+                <Grid width={'100%'} container={true} spacing={1} justifyContent={'space-around'}>
+                    <Grid item md={5} sm={8}>
+                    <Card sx={{ maxWidth: 445 }}>
+                            <CardContent>
+                                <Typography gutterBottom={false} color={'#023e8a'} variant='h5'>Bachelor's of Applied Science</Typography>
+                                <Typography gutterBottom={true} color={'#023e8a'} variant='subtitle1'>Mathematics and Engineering</Typography>
+                                <hr style={{width:'60%'}}></hr>
+                                <Grid container spacing={1} justifyContent={'space-between'}>
+                                    <Grid item xl={5.5} sm={12}>
+                                        <Chip icon={<SchoolIcon></SchoolIcon>} color='primary' variant='outlined' label="Queen's University"></Chip>
+                                    </Grid>
+                                    <Grid item xl={6.5} sm={12}>
+                                        <Chip icon={<CalendarMonthIcon></CalendarMonthIcon>} color='primary' variant='outlined' label="Sept 2019 - April 2023"></Chip>
+                                    </Grid>
+                                    <Grid item xl={6} sm={12}>
+                                        <Chip icon={<PlaceIcon></PlaceIcon>} color='primary' variant='outlined' label='Kingston, ON'></Chip>
+                                    </Grid>
                                 </Grid>
-                                <Grid item xs={4}>
-                                    <Typography>Queen's University</Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item sm={8} md={5}>
+                        <Card sx={{ maxWidth: 445 }}>
+                            <CardContent>
+                                <Typography gutterBottom={false} color={'#023e8a'} variant='h5'>Master's of Applied Science</Typography>
+                                <Typography gutterBottom={true} color={'#023e8a'} variant='subtitle1'>Engineering Mathematics</Typography>
+                                <hr style={{width:'60%'}}></hr>
+                                <Grid container spacing={1} justifyContent={'space-between'}>
+                                    <Grid item xl={6} sm={12}>
+                                        <Chip icon={<SchoolIcon></SchoolIcon>} color='primary' variant='outlined' label="Queen's University"></Chip>
+                                    </Grid>
+                                    <Grid item xl={6} sm={12}>
+                                        <Chip icon={<CalendarMonthIcon></CalendarMonthIcon>} color='primary' variant='outlined' label="Sept 2023 - Present"></Chip>
+                                    </Grid>
+                                    <Grid item xl={6} sm={12}>
+                                        <Chip icon={<PlaceIcon></PlaceIcon>} color='primary' variant='outlined' label='Kingston, ON'></Chip>
+                                    </Grid>
                                 </Grid>
-                            </Grid>
+                            </CardContent>
                         </Card>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <Card style={{ padding: '15px', minHeight: '100px' }}>
-                            Hello World
-                        </Card>
-                    </AccordionDetails>
-                </Accordion>
+                    </Grid>
+
+                </Grid>
             </div>
         </div>
     )
