@@ -4,6 +4,7 @@ import Fade from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PlaceIcon from '@mui/icons-material/Place';
+import BookIcon from '@mui/icons-material/Book';
 
 
 interface props {
@@ -53,6 +54,9 @@ const Education = (props: props) => {
                                     </Grid>
                                     <Grid item xl={6} sm={12}>
                                         <Chip icon={<PlaceIcon></PlaceIcon>} color='primary' variant='outlined' label='Kingston, ON'></Chip>
+                                    </Grid>
+                                    <Grid item xl={6} sm={12}>
+                                        <Chip icon={<BookIcon></BookIcon>} color='primary' variant='outlined' label='Research Based'></Chip>
                                     </Grid>
                                 </Grid>
                             </CardContent>
