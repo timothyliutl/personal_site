@@ -18,40 +18,40 @@ const Education = (props: props) => {
             <Typography textAlign={'center'} variant="h3" fontFamily={'Open Sans'} color={'#caf0f8'}>Education</Typography>
             <div style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', marginTop: '70px' }}>
                 <Grid width={'100%'} container={true} spacing={1} justifyContent={'space-around'}>
-                    <Grid item xs={5}>
+                    <Grid item md={5} sm={8}>
                     <Card sx={{ maxWidth: 445 }}>
                             <CardContent>
                                 <Typography gutterBottom={false} color={'#023e8a'} variant='h5'>Bachelor's of Applied Science</Typography>
                                 <Typography gutterBottom={true} color={'#023e8a'} variant='subtitle1'>Mathematics and Engineering</Typography>
                                 <hr style={{width:'60%'}}></hr>
                                 <Grid container spacing={1} justifyContent={'space-between'}>
-                                    <Grid item xs={5.5}>
+                                    <Grid item xl={5.5} sm={12}>
                                         <Chip icon={<SchoolIcon></SchoolIcon>} color='primary' variant='outlined' label="Queen's University"></Chip>
                                     </Grid>
-                                    <Grid item xs={6.5}>
+                                    <Grid item xl={6.5} sm={12}>
                                         <Chip icon={<CalendarMonthIcon></CalendarMonthIcon>} color='primary' variant='outlined' label="Sept 2019 - April 2023"></Chip>
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid item xl={6} sm={12}>
                                         <Chip icon={<PlaceIcon></PlaceIcon>} color='primary' variant='outlined' label='Kingston, ON'></Chip>
                                     </Grid>
                                 </Grid>
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item sm={8} md={5}>
                         <Card sx={{ maxWidth: 445 }}>
                             <CardContent>
                                 <Typography gutterBottom={false} color={'#023e8a'} variant='h5'>Master's of Applied Science</Typography>
                                 <Typography gutterBottom={true} color={'#023e8a'} variant='subtitle1'>Engineering Mathematics</Typography>
                                 <hr style={{width:'60%'}}></hr>
                                 <Grid container spacing={1} justifyContent={'space-between'}>
-                                    <Grid item xs={6}>
+                                    <Grid item xl={6} sm={12}>
                                         <Chip icon={<SchoolIcon></SchoolIcon>} color='primary' variant='outlined' label="Queen's University"></Chip>
                                     </Grid>
-                                    <Grid item xs={6}>
+                                    <Grid item xl={6} sm={12}>
                                         <Chip icon={<CalendarMonthIcon></CalendarMonthIcon>} color='primary' variant='outlined' label="Sept 2023 - Present"></Chip>
                                     </Grid>
-                                    <Grid item xs = {6}>
+                                    <Grid item xl={6} sm={12}>
                                         <Chip icon={<PlaceIcon></PlaceIcon>} color='primary' variant='outlined' label='Kingston, ON'></Chip>
                                     </Grid>
                                 </Grid>
