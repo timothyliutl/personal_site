@@ -29,7 +29,7 @@ const Projects = (props:props) => {
         liveDemo:''
     },{
         name: 'Capstone Project',
-        description: 'Final 4th year project supervised by Professor Tamas Linder. Image Compression System used to send images through a noisy channel.',
+        description: 'Final 4th year project. Image Compression System used to send images through a noisy channel.',
         image: './compressed_image.png',
         github:'https://github.com/timothyliutl/MTHE-493',
         liveDemo:'',
