@@ -147,9 +147,6 @@ const Intro = () => {
                             <Grid item>
                                 <Button target="_blank" href="https://www.linkedin.com/in/timothy-liu-4a738619b/" startIcon={<LinkedInIcon></LinkedInIcon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">LinkedIn</Button>
                             </Grid>
-                            <Grid item>
-                                <Button target="_blank" href="https://blitz.gg/lol/profile/na1/GentianPurple" startIcon={<Icon sx={{width:'23px', height:'23px', color:'blue'}}><img style={{width:'23px', height:'23px'}} src="./riot-games.svg"></img></Icon>} style={{ color: '#90e0ef', borderColor: '#90e0ef' }} variant="outlined">Riot Games</Button>
-                            </Grid>
                         </Grid>
                         <Grid style={{marginRight: 'auto', marginLeft:'auto'}} sx={{ display: { xs: 'flex', md: 'none' }}} justifyContent={'center'} container xs={6} sm={12} spacing={3}>
                             <Grid item>
